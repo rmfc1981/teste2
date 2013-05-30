@@ -2,16 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-#adiciona o postgreSQL para permitir o deplou no Heroku
-group :production do
-	gem 'pg', '0.12.2'
+group :development do
+ gem 'sqlite3'
 end
 
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -43,3 +37,7 @@ gem 'jquery-rails', '2.0.2'
 # To use debugger
 # gem 'debugger'
 
+#adiciona o postgreSQL para permitir o deplou no Heroku
+group :production do
+	gem 'pg', '0.12.2'
+end
